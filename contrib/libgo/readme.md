@@ -60,6 +60,9 @@ func main() {
 This code uses [Google Currency Converter](https://www.google.com/finance/converter) and [goquery](https://github.com/PuerkitoBio/goquery) for parsing the result.
 The main() function above is for debugging only.
 
+The function comment '//export jpy' is required to export.
+
+
 1. compile
 
 We can compile source code with '-buildmode=c-shared' option to make shared object.
@@ -120,7 +123,7 @@ callgo.so: callgo.c Makefile
 install:
                         cp callgo.so $(LIBINSTALL)
                         cp libgo.so $(LIBINSTALL)
-                        
+
 ```
 
 Let's compile and install.
