@@ -117,6 +117,10 @@ callgo.so: callgo.c Makefile
                         gcc -fpic -o callgo.o -c callgo.c $(INCLUDEDIRS)
                         gcc -shared -o callgo.so callgo.o $(LIBDIR) -lpq -lm -lgo
 
+install:
+                        cp callgo.so $(LIBINSTALL)
+                        cp libgo.so $(LIBINSTALL)
+                        
 ```
 
 Let's compile and install.
